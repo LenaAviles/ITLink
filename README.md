@@ -1,4 +1,5 @@
-# Учебная сборка Loftschool
+ITLink
+# Skills Management System
 
 > Сборка работает на gulp версии 4.0. 
 
