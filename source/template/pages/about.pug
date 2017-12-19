@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title About
+    body
+        .wrapper
+            section.section.hero
+                ul.socials
+                    each item in ['fb', 'gh', 'in']
+                        li.socials__item
+                            a(href="#" class=`socials__link socials__link_${item}`)                    
+                a(href="#").hamburger
+                a(href="#").down-arrow
+                .hero__title
+                    .section__title
+                        img(src="../../", alt="").section-title
+                        .user.hero__user-block
+                            .user__photo
+                            .user__name
+                            .user__desc
+            section.section.about
+                .about__left
+                    .title.about__section-title
+                        | About me
+                    .user-about
+                        .user-about__picture
+                        .user-about__title.subtitle
+                            | Who am I
+                        .user-about__text
+                            p I am a front-end developer. I'm 33.
+                            p I like it! 
+
+                .about__right
+                    .about-data__description
+                        .about-data__title
+                            .subtitle What can I do
+                        .about-data__text
+                            p Lorem ipsum dolor
+                    .about-data__content
+                        ul.skills
+                            each skill in ['Frontend', 'Backend', 'Workflow']
+                                li.skills__item
+                                    .skill-section
+                                        .skill-section__title= skill
+                                        ul.skill-section__list  
+                                            each skillName in ['HTML5', 'CSS3', 'jQuery']
+                                                li.skills-section__item
+                                                    .skill
+                                                        svg.skill__circle
+                                                        .skill__name= skillName 
+            section.section.map
