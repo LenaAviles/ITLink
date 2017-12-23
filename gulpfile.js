@@ -11,6 +11,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   del: require('del'),
+  fs: require('fs'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
