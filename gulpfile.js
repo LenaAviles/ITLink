@@ -13,6 +13,7 @@ global.$ = {
   del: require('del'),
   fs: require('fs'),
   browserSync: require('browser-sync').create(),
+  sassGlob: require('gulp-sass-glob'),
   gp: require('gulp-load-plugins')()
 };
 
