@@ -1,4 +1,4 @@
-extends ../main.layout.pug
+extends ../main-layout.pug
 block content
     section.section.hero
         .hero__bg
@@ -23,10 +23,15 @@ block content
 
     section.section.about
         .about__left
-            .title.about__section-title
-                | About me
+            svg(
+                viewbox="0 0 1000 100" 
+                preserveAspectRatio="none"
+                class="triangle triangle_fill_white about__triangles")
+                polygon(points="0,0 0,100 1000,100")
+            +title('ABOUT ME', 'about-header.png', 'about__section-title')
             .user-about
                 .user-about__picture
+                    img(src="assets/img/content/user.jpg", alt="").user-about__photo-img
                 .user-about__title.subtitle
                     | Who am I
                 .user-about__text
@@ -34,6 +39,11 @@ block content
                     p I like it! 
 
         .about__right
+            svg(
+                viewbox="0 0 1000 100" 
+                preserveAspectRatio="none"
+                class="triangle triangle_fill_beige about__triangles")
+                polygon(points="0,100 1000,100 1000,0")
             .about-data__description
                 .about-data__title
                     .subtitle What can I do

@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-// @font-face {
-// 	font-family: 'bernier';	
-// }}
+@font-face {
+    font-family: 'bernier';
+    src: url('../fonts/BERNIERRegularRegular.eot');
+    src: url('../fonts/BERNIERRegularRegular.eot') format('embedded-opentype'),
+         url('../fonts/BERNIERRegularRegular.woff2') format('woff2'),
+         url('../fonts/BERNIERRegularRegular.woff') format('woff'),
+         url('../fonts/BERNIERRegularRegular.ttf') format('truetype'),
+         url('../fonts/BERNIERRegularRegular.svg#BERNIERRegularRegular') format('svg');
+}
+
+@mixin bernier() {
+    font-family: 'bernier';
+}

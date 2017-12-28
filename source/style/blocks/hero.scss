@@ -5,16 +5,11 @@
 }
 
 .hero__title {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	@include centered(y);
 	text-align: center;
 	width: 100%;
 }
 
 .hero__user-block {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@include centered();
 }

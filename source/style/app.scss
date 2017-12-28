@@ -1,5 +1,12 @@
+$white: lighten(#efeee9, 5%);
+$beige: #eeebdf;
+$main-font-color: #373e42;
+
 //layout setups
 @import "layout/setups.scss";
 @import "layout/fonts.scss";
+
+//mixins
+@import 'helpers/mixins.scss';
 
 @import 'blocks/**/*.scss';
