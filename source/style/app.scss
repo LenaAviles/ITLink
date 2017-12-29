@@ -1,6 +1,8 @@
-$white: lighten(#efeee9, 5%);
+$white: #efeee9;
 $beige: #eeebdf;
 $main-font-color: #373e42;
+$skills-grey: #dfdcd5;
+$skills-green: #10c1a8;
 
 //layout setups
 @import "layout/setups.scss";

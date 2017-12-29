@@ -1,0 +1,27 @@
+// .user-about {
+// 	text-align: center;
+// }
+
+.user-about__picture {
+	@include centered(x);
+	position: relative;
+	width: 494px;
+	height: 393px;
+	overflow: hidden;
+}
+
+.user-about__photo-img {
+	width: 494px;
+	@include centered();
+}
+
+.user-about__text {
+	font-size: 16px;
+	width: 494px;
+	@include centered(x);
+	position: relative;
+
+	&_paragraph {
+		margin-bottom: 20px;
+	}	
+}
