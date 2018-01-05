@@ -2,10 +2,11 @@
 
 module.exports = function() {
     $.gulp.task('sprite:png', function () {
-        var spriteData = $.gulp.src('source/sprites/*.png')
+        var spriteData = $.gulp.src('source/sprite/*.png')
         .pipe($.gp.spritesmith({
         imgName: 'sprite.png',
-        cssName: 'sprite.css'
+        cssName: 'sprite.css',
+        // engine: $.phantomjssmith
         }));
 
         // Pipe image stream through image optimizer and onto disk

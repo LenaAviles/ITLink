@@ -4,10 +4,12 @@ block content
         .hero__bg
             img(src="assets/img/bg/portfolio.jpg", alt="").hero__bg-img
 
-        ul.socials
+        ul.socials            
             each item in ['fb', 'gh', 'in']
                 li.socials__item
-                    a(href="#" class=`socials__link socials__link_${item}`)                    
+                    a(href="#" class=`socials__link socials__link_${item}`)
+                        svg(class=`socials__icon socials__icon_${item}`)
+                            use(xlink:href=`assets/img/sprite.svg#${item}`)                    
         a(href="#").hamburger
         a(href="#").down-arrow
             img(src="assets/img/icons/arrow_down.svg", alt="").down-arrow__icon

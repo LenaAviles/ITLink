@@ -14,6 +14,10 @@ global.$ = {
   fs: require('fs'),
   browserSync: require('browser-sync').create(),
   sassGlob: require('gulp-sass-glob'),
+  spritesmith: require('gulp.spritesmith'),
+  buffer: require('vinyl-buffer'),
+  merge: require('merge-stream'),
+  // phantomjssmith: require('phantomjssmith'),
   gp: require('gulp-load-plugins')()
 };
 
@@ -32,7 +36,7 @@ $.gulp.task('default', $.gulp.series(
     'copy:fonts',
     'css:foundation',
     'sprite:svg',
-    'sprite:svg'
+    'sprite:png'
   ),
   $.gulp.parallel(
     'watch',
