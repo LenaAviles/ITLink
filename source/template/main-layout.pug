@@ -12,4 +12,39 @@ html(lang="en")
         title About
     body
         .wrapper
+            header.header
+                .container
+                    .header__logo
+                        a.logo.header__logo-link
+                            img(src="assets/img/logo.png" alt="").logo__img.header__logo-img
+                    .header__search
+                        .search
+                            form.search__form
+                                input(type="text" name="" id="" placeholder="Search").search__input
+                                input(type="submit" value="").search__submit
+                    ul.header__menu.menu
+                        each item in ['Main', 'Skills', 'Education', 'Profile', 'Login']
+                            li.header__menu-item.menu__item
+                                a(href="#" class=`header__menu-link header__menu-link_${item} menu__link`)
+                                    .header__menu-text.menu__text= item
+            
             block content
+    
+    footer.footer
+        .container
+            .footer__first-row
+                ul.footer__menu.menu
+                    each item in ['About', 'Expirience', 'Education', 'Login']
+                        li.footer__menu-item.menu__item
+                            a(href="#" class=`footer__menu-link footer__menu-link_${item} menu__link`)
+                                .footer__menu-text.menu__text= item
+                ul.footer__socials.socials            
+                    each item in ['fb', 'gh', 'in']
+                        li.socials__item
+                            a(href="#" class=`socials__link socials__link_${item}`)
+                                svg(class=`socials__icon socials__icon_${item}`)
+                                    use(xlink:href=`assets/img/sprite.svg#${item}`)    
+            //- hr
+            .footer__second-row
+                .footer__text Skills management system, created on EPAM Front-End courses
+                .footer__copyright © Lena Aviles | Made with Love | 2017

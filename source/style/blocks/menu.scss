@@ -1,0 +1,12 @@
+.menu__item {
+    display: inline-block;    
+}
+
+.menu__item:not(:first-child) {
+    margin-left: 40px;
+}
+
+.menu__link {
+    color: white;    
+    font-weight: bold;
+}

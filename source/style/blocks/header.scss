@@ -1,0 +1,17 @@
+.header {
+    height: 60px;
+    background: $menu-color;
+}
+
+.header__menu {
+    float: right;
+}
+
+.header__logo, .header__search {
+    float: left;
+}
+
+.header__logo-img {
+    max-width: 150px;
+    max-height: 45px;
+}

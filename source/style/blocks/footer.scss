@@ -1,0 +1,28 @@
+.footer {
+    background: $footer-color;
+    height: 150px;
+    margin-top: -150px;
+    position: relative;
+    color: white;
+}
+
+.footer__first-row {
+    height: 75px;
+    border-bottom: grey solid 1px;
+}
+
+.footer__menu {
+    float: left;
+}
+
+.footer__socials {
+    float: right;    
+}
+
+.footer__text {
+    float: left;
+}
+
+.footer__copyright {
+    float: right;
+}
