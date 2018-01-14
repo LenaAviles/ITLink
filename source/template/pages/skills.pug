@@ -1,0 +1,30 @@
+extends ../main-layout.pug
+block content
+    .container
+        section.section.breadcrumbs        
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href="#").breadcrumbs__link Main                                            
+                li.breadcrumbs__item
+                    a.breadcrumbs__link Skills
+
+        section.section.skills-rate
+            .skills-rate__title.subtitle 
+                | Skills Rate
+            ul.skills
+                each skillGroup in skills
+                    each skillsArray, skillGroupName in skillGroup
+                        li.skills__item.skills-rate__group-item
+                            .skill-section.skills-rate__section
+                                .skill-section__title.skills-rate__title= skillGroupName
+                                ul.skill-section__list  
+                                    each skill in skillsArray
+                                        each skillRate, skillTitle in skill
+                                            li.skills-rate__item
+                                                .skill.skills-rate__skill
+                                                    label.skills-rate__name= skillTitle
+                                                    span.skills-rate__input-type %
+                                                    input(value= skillRate type="number" min="0" max="100").skills-rate__input
+                                                                                                       
+        button.button.save-button Save                                              
+    .empty

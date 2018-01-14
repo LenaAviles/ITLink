@@ -2,10 +2,11 @@
     color: $main-font-color;
     font-size: 35px;
     @include bernier();    
-	padding: 45px 80px;  
+	
 	
 	&_about {
 		@include centered(x);
+		padding: 45px 80px;  
 		display: inline-block;
 		position: relative;
 	

@@ -9,4 +9,8 @@
 .menu__link {
     color: white;    
     font-weight: bold;
+
+    &:hover {
+        color: $skills-green;
+    }
 }

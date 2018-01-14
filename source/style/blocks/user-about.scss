@@ -1,24 +1,27 @@
-// .user-about {
-// 	text-align: center;
-// }
+.user-about {
+	width: $container-width / 2;
+	float: right;	
+	padding-right: 40px;
+}
 
 .user-about__picture {
-	@include centered(x);
-	position: relative;
-	width: 494px;
-	height: 393px;
+	// @include centered(x);
+	// position: relative;
+	// width: ($container-width / 2);
+	height: ($container-width / 2) - 70px;;
 	overflow: hidden;
 }
 
 .user-about__photo-img {
-	width: 494px;
+	width: $container-width / 2;
 	@include centered();
+	position: relative;
 }
 
 .user-about__text {
-	width: 494px;
-	@include centered(x);
-	position: relative;
+	// width: 494px;
+	// @include centered(x);
+	// position: relative;
 
 	&_paragraph {
 		margin-bottom: 20px;

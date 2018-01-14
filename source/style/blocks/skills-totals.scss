@@ -1,0 +1,28 @@
+.skills-totals__link {
+    display: block;    
+}
+
+.skills-totals__icon {    
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    fill: $main-font-color;          
+  }
+
+// .skills-totals__icon_expert {
+//     fill: orange;
+// }
+
+// .skills-totals__icon_knowledge {
+//     fill: green;
+// }
+
+// .skills-totals__icon_gap {
+//     fill: red;
+// }
+
+.skills-totals__name {
+    color: $main-font-color;
+    margin-left: 5px;
+    font-variant: small-caps;
+}

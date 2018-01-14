@@ -1,0 +1,27 @@
+.breadcrumbs {
+    height: 40px;
+    line-height: 40px;
+}
+
+.breadcrumbs__item {
+    display: inline-block;   
+
+    &:first-child {
+        .breadcrumbs__link{
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.breadcrumbs__link {
+    color: $skills-green;
+
+    &:before {
+        content: "›"; 
+        margin: 10px;                   
+        color: $skills-green;
+        font-weight: bold;
+    }
+}

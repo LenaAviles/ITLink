@@ -1,17 +1,23 @@
 .header {
     height: 60px;
-    background: $menu-color;
+    background: $menu-color;  
+    padding: 10px;  
 }
 
-.header__menu {
-    float: right;
+.header__menu {   
+    float: right;  
 }
 
 .header__logo, .header__search {
     float: left;
+    width: 25%;
+}
+
+.header__search {
+    position: relative;
 }
 
 .header__logo-img {
     max-width: 150px;
-    max-height: 45px;
+    max-height: 40px;
 }

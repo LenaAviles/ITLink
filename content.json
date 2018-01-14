@@ -4,7 +4,7 @@
             "Frontend" : [{"HTML5" : 75}, {"CSS3" : 60}, {"JavaScript & JQuery" : 60}]
         },
         {
-            "Backend" : [{"PHP" : 10}, {"mySQL" : 20}, {"Node.js & npm" : 30}, {"Mongo.db" : 40}]
+            "Backend" : [{"PHP" : 10}, {"mySQL" : 20}, {"Node.js & npm" : 30}, {"Mongo.db" : 40}, {"PHP" : 10}, {"mySQL" : 20}, {"Node.js & npm" : 30}, {"Mongo.db" : 40}]
         },
         {
             "Workflow" : [{"Git" : 60}, {"Gulp" : 50}, {"Bower" : 40}]

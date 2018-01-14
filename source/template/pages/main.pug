@@ -1,0 +1,33 @@
+extends ../main-layout.pug
+block content
+    .container
+        aside.sidebar
+            
+            .sidebar__hero-bg
+                .sidebar__hero-title                
+                    .user
+                        .user__photo
+                            .user__photo-avatar
+                                img(src="assets/img/content/user.jpg", alt="").user__photo-img
+                        .sidebar-user__name Lena Ricabal Aviles                   
+
+                ul.socials.sidebar__socials            
+                    each item in ['fb', 'gh', 'in']
+                        li.socials__item
+                            a(href="#" class=`socials__link socials__link_${item}`)
+                                svg(class=`socials__icon socials__icon_${item}`)
+                                    use(xlink:href=`assets/img/sprite.svg#${item}`)
+
+            ul.skills-totals.sidebar__skills            
+                each item in ['expert', 'knowledge', 'gap']
+                    li.skills-totals__item
+                        a(href="#" class=`skills-totals__link skills-totals__link_${item}`)
+                            svg(class=`skills-totals__icon skills-totals__icon_${item}`)
+                                use(xlink:href=`assets/img/sprite.svg#${item}`)
+                            span.skills-totals__name= item
+                            span.skills-totals__skills-average (10 skills)
+                            
+
+        main.main-content
+
+    .empty

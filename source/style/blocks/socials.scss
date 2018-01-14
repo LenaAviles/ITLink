@@ -3,8 +3,12 @@
 }
 
 .socials__item {
-    display: inline-block;  
-    margin-left: 28px;        
+    display: inline-block; 
+            
+}
+
+.socials__item:not(:first-child) {
+    margin-left: 28px;
 }
 
 .socials__link {

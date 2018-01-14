@@ -1,0 +1,25 @@
+.sidebar {
+    width: 25%;
+    background-color: $beige;
+    min-height: 100vh;
+}
+
+.sidebar__socials {
+    text-align: center;    
+}
+
+.sidebar__hero-bg { 
+    background: url("../img/bg/portfolio.jpg");
+    background-size: cover;  
+    padding: 25px;  
+}
+
+.sidebar-user__name {
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar__skills {
+    width: 80%;
+    margin: 10px auto;
+}

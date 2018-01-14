@@ -1,0 +1,37 @@
+.skills-rate {
+    @extend %clearfix;        
+}
+
+.skills-rate__group-item {   
+    width: 250px;    
+    float: left;
+    // display: inline-block;
+    margin-right: 35px;
+}
+
+.skills-rate__item {   
+    width: 250px;    
+    float: left;
+    margin-bottom: 5px;
+}
+
+.skills-rate__name {
+    width: 70%;
+    float: left;
+}
+
+.skills-rate__input {
+    width: 20%;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+.skills-rate__input-type {
+    width: 10%;
+    float: right;
+    padding-left: 7px;
+}
+
