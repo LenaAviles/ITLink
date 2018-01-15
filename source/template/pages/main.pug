@@ -6,9 +6,9 @@ block content
             .sidebar__hero-bg
                 .sidebar__hero-title                
                     .user
-                        .user__photo
+                        .user__photo.hero-user__photo
                             .user__photo-avatar
-                                img(src="assets/img/content/user.jpg", alt="").user__photo-img
+                                img(src="assets/img/content/user.jpg", alt="").user__photo-img.hero-user__photo-img
                         .sidebar-user__name Lena Ricabal Aviles                   
 
                 ul.socials.sidebar__socials            
@@ -18,16 +18,53 @@ block content
                                 svg(class=`socials__icon socials__icon_${item}`)
                                     use(xlink:href=`assets/img/sprite.svg#${item}`)
 
-            ul.skills-totals.sidebar__skills            
+            ul.skills-totals.sidebar__skills.sidebar__section            
                 each item in ['expert', 'knowledge', 'gap']
                     li.skills-totals__item
                         a(href="#" class=`skills-totals__link skills-totals__link_${item}`)
                             svg(class=`skills-totals__icon skills-totals__icon_${item}`)
                                 use(xlink:href=`assets/img/sprite.svg#${item}`)
-                            span.skills-totals__name= item
+                            span.skills-totals__text= item
                             span.skills-totals__skills-average (10 skills)
-                            
+            
+            ul.courses-totals.sidebar__courses.sidebar__section                  
+                    li.courses-totals__item
+                        a(href="#" class=`courses-totals__link courses-totals__link_passed`)                            
+                            span.courses-totals__courses-average 10
+                            span.courses-totals__text courses passed
+                    li.courses-totals__item
+                        a(href="#" class=`courses-totals__link courses-totals__link_in-progress`)                            
+                            span.courses-totals__courses-average 5
+                            span.courses-totals__text courses in progress                           
 
         main.main-content
+            .dialog
+
+            ul.topnews
+                li.topnews__item
+                    .topnews__header
+                        .topnews__user
+                            .user
+                                .user__photo.topnews-user__photo
+                                    .user__photo-avatar.topnews-user__photo-avatar
+                                        img(src="assets/img/content/user.jpg", alt="").user__photo-img.topnews-user__photo-img
+                                .topnews-user__name Lena Ricabal Aviles
+                                .topnews-user__desc QA Engineer - Delphi Software
+                        .topnews__date
+
+                    .topnews__content
+                        p Preprocessing
+                        p CSS on its own can be fun, but stylesheets are getting larger, more complex, and harder to maintain. This is where a preprocessor can help. Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun again.
+                        p Once you start tinkering with Sass, it will take your preprocessed Sass file and save it as a normal CSS file that you can use in your website.
+                        p The most direct way to make this happen is in your terminal. Once Sass is installed, you can compile your Sass to CSS using the sass command. You'll need to tell Sass which file to build from, and where to output CSS to. For example, running sass input.scss output.css from your terminal would take a single Sass file, input.scss, and compile that file to output.css.
+                    
+                    
+                    ul.topnews__events.post-events            
+                        each item in ['like', 'share', 'comment']
+                            li.post-events__item
+                                a(href="#" class=`post-events__link post-events__link_${item}`)
+                                    svg(class=`post-events__icon post-events__icon_${item}`)
+                                        use(xlink:href=`assets/img/sprite.svg#${item}`)
+
 
     .empty

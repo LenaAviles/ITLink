@@ -2,9 +2,7 @@
 	text-align: center;
 }
 
-.user__photo {
-	width: 147px;
-	height: 147px;
+.user__photo {	
 	border-radius: 50%;
 	margin-bottom: 25px;
 	overflow: hidden;
@@ -14,10 +12,6 @@
 .user__photo-avatar {
 	display: block;
 	max-width: 100%;
-}
-
-.user__photo-img {
-	width: 147px;	
 }
 
 .user__name {

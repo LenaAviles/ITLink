@@ -22,3 +22,12 @@
 .hero__user-block {
 	@include centered();
 }
+
+.hero-user__photo {
+	width: 147px;
+	height: 147px;
+}
+
+.hero-user__photo-img {
+	width: 147px;	
+}

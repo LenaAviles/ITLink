@@ -18,7 +18,8 @@ body {
 }
 
 .container {
-    width: $container-width;
+	width: $container-width;
+	@extend %clearfix;
     margin: 0 auto;
 }
 
