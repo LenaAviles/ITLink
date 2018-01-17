@@ -38,7 +38,18 @@ block content
                             span.courses-totals__text courses in progress                           
 
         main.main-content
-            .dialog
+            .dialog.topnews__item
+                .topnews__header.dialog__header
+                    .topnews__user
+                        .user
+                            .user__photo.topnews-user__photo
+                                .user__photo-avatar.topnews-user__photo-avatar
+                                    img(src="assets/img/content/user.jpg", alt="").user__photo-img.topnews-user__photo-img
+                            .topnews-user__name Lena Ricabal Aviles
+                            .topnews-user__desc QA Engineer - Delphi Software
+                    .topnews__date 17.01.2018
+                textarea(placeholder="Say something...").dialog__text.topnews__content
+                    
 
             ul.topnews
                 li.topnews__item
@@ -50,7 +61,7 @@ block content
                                         img(src="assets/img/content/user.jpg", alt="").user__photo-img.topnews-user__photo-img
                                 .topnews-user__name Lena Ricabal Aviles
                                 .topnews-user__desc QA Engineer - Delphi Software
-                        .topnews__date
+                        .topnews__date 17.01.2018
 
                     .topnews__content
                         p Preprocessing

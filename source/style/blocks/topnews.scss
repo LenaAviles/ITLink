@@ -6,13 +6,14 @@
 	padding: 20px;
 }
 
-.topnews__header, .topnews__content {
+.topnews__header {
+	@extend %clearfix;
+	line-height: 50px;
 	border-bottom: 1px solid rgba(#000, .1);
 }
 
-.topnews__user {
-	@extend %clearfix;
-	line-height: 50px;
+.topnews__user {	
+	float: left;
 }
 
 .topnews-user__photo {
@@ -31,7 +32,8 @@
 	margin-left: 15px;	
 }
 
-.topnews-user__desc {
+.topnews-user__desc, .topnews__date {
+	color: lighten($main-font-color, 25%);
 	font-size: 14px;
 	float: left;
 
@@ -43,4 +45,11 @@
 
 .topnews__content {
 	padding: 10px 0;
+	max-height: 208px;
+	overflow: hidden;
+}
+
+.topnews__events {
+	border-top: 1px solid rgba(#000, .1);
+	padding-top: 10px;
 }
