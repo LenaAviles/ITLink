@@ -17,6 +17,7 @@ global.$ = {
   spritesmith: require('gulp.spritesmith'),
   buffer: require('vinyl-buffer'),
   merge: require('merge-stream'),
+  cssunit: require('gulp-css-unit'),
   // phantomjssmith: require('phantomjssmith'),
   gp: require('gulp-load-plugins')()
 };

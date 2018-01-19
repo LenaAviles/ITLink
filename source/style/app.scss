@@ -7,13 +7,11 @@ $socials-color: #fff;
 $footer-color: rgba(#3c4044, .85);
 $menu-color: #283e4a;
 
-$container-width: 1200px;
+//mixins
+@import 'helpers/mixins.scss';
 
 //layout setups
 @import "layout/setups.scss";
 @import "layout/fonts.scss";
-
-//mixins
-@import 'helpers/mixins.scss';
 
 @import 'blocks/**/*.scss';

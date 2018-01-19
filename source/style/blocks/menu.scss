@@ -1,5 +1,6 @@
 .menu__item {
-    display: inline-block;    
+    display: inline-block; 
+    vertical-align: middle;   
 }
 
 .menu__item:not(:first-child) {

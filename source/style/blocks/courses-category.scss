@@ -1,9 +1,17 @@
 .courses-category__item {
-	padding: 10px;
+	// padding: 10px;
 }
 
 .courses-category__link {
 	display: block;
 	font-weight: bold;
 	color: $main-font-color;
+	// padding: 10px;
+	&:hover {
+        color: $skills-green;
+    }
+}
+
+.courses-category__total {
+	margin-left: 5px;
 }
