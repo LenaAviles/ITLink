@@ -1,11 +1,14 @@
-.skills-section {
-	// width: $container-width / 2;		
+.skills-section {		
 	padding: 0 40px;
+}
+
+.skill-section__list_about {
+	padding: 0 20px;
 }
 
 .skills-section__item {
 	position: relative;	
-	margin-left: 40px;
+	margin: 0 20px;
 	display: inline-block;
 	width: 115px;
 	height: 115px;

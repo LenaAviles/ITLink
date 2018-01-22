@@ -6,6 +6,11 @@
     float: left;
     width: 50%;
     position: relative;
+    
+    @include tablets() {
+        float: none;
+        width: 100%;
+    }
 }
 
 .about__left {

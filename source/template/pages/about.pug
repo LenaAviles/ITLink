@@ -24,13 +24,23 @@ block content
                     .user__name Lena Ricabal Aviles
                     .user__desc QA Engineer - Delphi Software <br>Ukraine
 
-        section.section.about
-            .about__left
+        section.section.triangles
+            .triangles__left
                 svg(
                     viewbox="0 0 1000 100" 
                     preserveAspectRatio="none"
                     class="triangle triangle_fill_white about__triangles")
                     polygon(points="0,0 0,100 1000,100")
+            .triangles__right
+                svg(
+                    viewbox="0 0 1000 100" 
+                    preserveAspectRatio="none"
+                    class="triangle triangle_fill_beige about__triangles")
+                    polygon(points="0,100 1000,100 1000,0")
+
+
+        section.section.about
+            .about__left     
                 +title('ABOUT ME', 'about-header.png', 'about__section-title')
                 .user-about
                     .user-about__picture
@@ -43,11 +53,6 @@ block content
                         p.user-about__text_paragraph I am proficient in text editor Atom, Brackets, PhpStorm, graphics editor Adobe Photoshop. 
                         
             .about__right
-                svg(
-                    viewbox="0 0 1000 100" 
-                    preserveAspectRatio="none"
-                    class="triangle triangle_fill_beige about__triangles")
-                    polygon(points="0,100 1000,100 1000,0")
                 .about-data__description
                     .about-data__title
                         .subtitle.subtitle_about What can I do
@@ -61,7 +66,7 @@ block content
                             li.skills__item
                                 .skill-section
                                     .skill-section__title= skillGroupName
-                                    ul.skill-section__list  
+                                    ul.skill-section__list.skill-section__list_about  
                                         each skill in skillsArray
                                             each skillRate, skillTitle in skill
                                                 li.skills-section__item

@@ -1,18 +1,19 @@
-.footer {
+.footer {    
     background: $footer-color;
     height: 150px;
     margin-top: -150px;
+    padding: 10px;
     position: relative;
     color: white;
 }
 
-.footer__first-row {
+.footer__first-row {    
     height: 75px;
     line-height: 75px;
     border-bottom: solid 1px rgba(#fff, .2);
 }
 
-.footer__second-row { 
+.footer__second-row {    
     height: 75px;   
     line-height: 75px;
 }

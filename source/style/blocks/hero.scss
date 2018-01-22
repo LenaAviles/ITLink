@@ -1,11 +1,13 @@
 .hero {
+	width: 100%;
 	height: 600px;
 	overflow: hidden;
 	position: relative;
 }
 
 .hero__bg-img {
-	max-width: 100%;
+	min-width: 100%;
+	height: 100%;
 }
 
 .hero__socials {

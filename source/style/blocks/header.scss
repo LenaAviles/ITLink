@@ -5,7 +5,8 @@
 }
 
 .header__menu {   
-    float: right;  
+    float: right;
+    padding: 5px;  
 }
 
 .header__logo, .header__search {
@@ -15,6 +16,11 @@
 
 .header__search {
     position: relative;
+    padding: 5px;
+
+    @include phones() {
+        display: none;
+    }
 }
 
 .header__logo-img {

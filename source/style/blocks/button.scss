@@ -1,9 +1,13 @@
-.button {
-    background: $skills-green;
+.button { 
+    cursor: pointer;   
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: none;    
     outline: none;
-    color: #fff;
+    color: #fff;    
+}
+
+.save-button {
+    border-radius: 5px;
+    background: $skills-green;
     margin: 20px 0;
 }

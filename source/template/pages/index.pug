@@ -1,0 +1,49 @@
+include ../mixins/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="assets/css/foundation.css")
+        link(rel="stylesheet", href="assets/css/normalize.css")
+        link(rel="stylesheet", href="assets/css/app.css")
+        title Login
+    body
+        .wrapper
+            .login__bg
+                    img(src="assets/img/bg/portfolio.jpg", alt="").login__bg-img
+            
+            .autorization-form
+                .autorization-form
+                    .autorization-form__title.subtitle Log in
+                    .autorization-form__login
+                        label.autorization-form__label
+                            svg.autorization-form__icon
+                                    use(xlink:href=`assets/img/sprite.svg#login`)
+                        input(id="login__username" type="text" name="username" class="autorization-form__input autorization-form__username" placeholder="Username" required)
+                    .autorization-form__password
+                        label.autorization-form__label
+                            svg.autorization-form__icon
+                                    use(xlink:href=`assets/img/sprite.svg#password`)
+                        input(id="login__password" type="text" name="password" class="autorization-form__input autorization-form__password" placeholder="Password" required)
+                    
+                    .autorization-form__captcha
+                        .autorization-form__checkbox
+                            label.checkbox I am a human
+                                input.checkbox__input(type="checkbox" checked="checked")
+                                span.checkbox__checkmark
+                        .autorization-form__question Are you sure?
+                        .autorization-form__radio
+                            label.radio Yes
+                                input.radio__input(type="radio" name="radio")
+                                span.radio__checkmark
+                            label.radio I'm not sure
+                                input.radio__input(type="radio" name="radio")
+                                span.radio__checkmark
+
+                    
+                        button.button.autorization-form__button_left Main
+                    
+                        button.button.autorization-form__button_right Log in

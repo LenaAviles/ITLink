@@ -10,7 +10,28 @@
 
         &_beige {
             fill: $beige;
+
+            @include tablets() {
+                fill: $white;
+            }            
         }
 
     }    
 }
+
+.triangles {
+    @extend %clearfix;    
+}
+
+.triangles__left {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.triangles__right {
+    float: right;
+    width: 50%;
+    position: relative;
+}
+

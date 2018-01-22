@@ -1,4 +1,9 @@
 .main-content {
 	width: 74%;
-	float: right;		 
+	float: right;	
+	
+	@include tablets() {
+		float: none;
+		width: 100%;
+	}
 }

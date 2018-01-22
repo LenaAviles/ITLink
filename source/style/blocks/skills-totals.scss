@@ -12,25 +12,12 @@
     top: 3px;
   }
 
-// .skills-totals__icon_expert {
-//     fill: orange;
-// }
-
-// .skills-totals__icon_knowledge {
-//     fill: green;
-// }
-
-// .skills-totals__icon_gap {
-//     fill: red;
-// }
-
 .skills-totals__text {    
     font-variant: small-caps;
 }
 
 .skills-totals__text, .skills-totals__skills-average {
     color: $main-font-color;
-    margin-left: 5px;
-    // font-variant: small-caps;
+    margin-left: 5px;    
 }
 

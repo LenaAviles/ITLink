@@ -1,6 +1,10 @@
 html {
 	height: 100%;
 
+	@include laptop() {
+		font-size: 15px;
+	}
+
 	@include tablets() {
 		font-size: 14px;
 	}
@@ -30,6 +34,10 @@ body {
 	@extend %clearfix;
 	margin: 0 auto;
 	
+	@include laptop() {
+		max-width: 992px;
+	}
+
 	@include tablets() {
 		max-width: 768px;
 	}
