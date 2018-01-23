@@ -1,0 +1,6 @@
+.login-footer {   
+    bottom: 10px;    
+    color: rgba(#fff, .75);
+    text-align: center;
+    @include centered(x);    
+}

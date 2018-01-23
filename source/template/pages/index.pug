@@ -14,36 +14,41 @@ html(lang="en")
         .wrapper
             .login__bg
                     img(src="assets/img/bg/portfolio.jpg", alt="").login__bg-img
-            
-            .autorization-form
-                .autorization-form
-                    .autorization-form__title.subtitle Log in
-                    .autorization-form__login
-                        label.autorization-form__label
-                            svg.autorization-form__icon
-                                    use(xlink:href=`assets/img/sprite.svg#login`)
-                        input(id="login__username" type="text" name="username" class="autorization-form__input autorization-form__username" placeholder="Username" required)
-                    .autorization-form__password
-                        label.autorization-form__label
-                            svg.autorization-form__icon
-                                    use(xlink:href=`assets/img/sprite.svg#password`)
-                        input(id="login__password" type="text" name="password" class="autorization-form__input autorization-form__password" placeholder="Password" required)
-                    
-                    .autorization-form__captcha
-                        .autorization-form__checkbox
-                            label.checkbox I am a human
-                                input.checkbox__input(type="checkbox" checked="checked")
-                                span.checkbox__checkmark
-                        .autorization-form__question Are you sure?
-                        .autorization-form__radio
-                            label.radio Yes
-                                input.radio__input(type="radio" name="radio")
-                                span.radio__checkmark
-                            label.radio I'm not sure
-                                input.radio__input(type="radio" name="radio")
-                                span.radio__checkmark
+                        
+            .login-form
+                .login-form__title.subtitle Log in
+                .login-form__login
+                    label.login-form__label
+                        svg.login-form__icon
+                                use(xlink:href=`assets/img/sprite.svg#login`)
+                    input(id="login__username" type="text" name="username" class="login-form__input login-form__username" placeholder="Username" required)
+                .login-form__password
+                    label.login-form__label
+                        svg.login-form__icon
+                                use(xlink:href=`assets/img/sprite.svg#password`)
+                    input(id="login__password" type="text" name="password" class="login-form__input login-form__password" placeholder="Password" required)
+                
+                .login-form__captcha
+                    .login-form__checkbox
+                        label.checkbox I am a human
+                            input.checkbox__input(type="checkbox" checked="checked")
+                            span.checkbox__checkmark
+                    .login-form__question Are you sure?
+                    .login-form__radio
+                        label.radio Yes
+                            input.radio__input(type="radio" name="radio")
+                            span.radio__checkmark
+                        label.radio I'm not sure
+                            input.radio__input(type="radio" name="radio")
+                            span.radio__checkmark
 
-                    
-                        button.button.autorization-form__button_left Main
-                    
-                        button.button.autorization-form__button_right Log in
+                
+                    button.button.login-form__button_left Main
+                
+                    button.button.login-form__button_right Log in
+            
+        footer.login-footer                
+                .login-footer__text Skills management system, created on EPAM Front-End courses
+                .login-footer__copyright © Lena Aviles | Made with Love | 2017
+
+        script(src="assets/js/app.js")

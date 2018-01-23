@@ -1,7 +1,7 @@
-.autorization-form {
+.login-form {
     width: 380px;
-    height: 365px;
-    background: rgba(#fff, .35);
+    height: 350px;
+    background: rgba(#fff, .75);
     border-radius: 5px;
     @include centered();
     padding: 0 20px;
@@ -9,17 +9,18 @@
     text-align: center;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    z-index: 999;
 }
 
-.autorization-form__title {
+.login-form__title {
     padding: 20px 0;
 }
 
-.autorization-form__login, .autorization-form__password {    
+.login-form__login, .login-form__password {    
     margin-bottom: 20px;
 }
 
-.autorization-form__icon {    
+.login-form__icon {    
     display: inline-block;
     fill: #c4c9cb;    
     height: 16px;
@@ -27,7 +28,7 @@
     width: 16px;
   }
 
-.autorization-form__label, .autorization-form__input {    
+.login-form__label, .login-form__input {    
     outline: 0;
     border: none;    
     border-radius: 5px;
@@ -35,7 +36,7 @@
 }
 
 
-.autorization-form__label {
+.login-form__label {
     font-size: 15px;
     width: 15%;
     background-color: #efeee9;
@@ -43,7 +44,7 @@
     border-top-right-radius: 0;    
 }
 
-.autorization-form__input {    
+.login-form__input {    
     width: 85%;
     margin: 0;
     background-color: #fff;
@@ -51,38 +52,42 @@
     border-top-left-radius: 0;
   }
 
-  .autorization-form__captcha {
-      margin: 30px 0;
+.login-form__captcha {
+      margin: 25px 0;
   }
 
-.autorization-form__checkbox {    
+.login-form__checkbox {    
     @include centered(x);           
   }
 
-.autorization-form__question {
+.login-form__question {
     font-weight: bold;
     padding-top: 35px;
 }
   
 
-.autorization-form__button_left, .autorization-form__button_right {
+.login-form__button_left, .login-form__button_right {
     height: 50px;
     font-weight: bold;
     display: block;
     float: left;
     width: 49.9%; 
     position: absolute; 
-    top: 365px;     
+    top: 350px;     
     bottom: 0; 
-    background: rgba($skills-green, .5);   
+    background: rgba($skills-green, .5);
+    
+    &:hover {
+        background: rgba($skills-green, .4);
+    }
   }
 
-.autorization-form__button_left {
+.login-form__button_left {
     left: 0;
     border-bottom-left-radius: 5px;    
 }
 
-.autorization-form__button_right {
+.login-form__button_right {
     right: 0;
     border-bottom-right-radius: 5px;    
 }

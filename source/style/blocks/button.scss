@@ -10,4 +10,8 @@
     border-radius: 5px;
     background: $skills-green;
     margin: 20px 0;
+
+    &:hover {
+        background: darken($skills-green, 5%);
+    }
 }

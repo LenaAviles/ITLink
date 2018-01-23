@@ -30,22 +30,23 @@ html(lang="en")
             
             block content
     
-    footer.footer
-        .container
-            .footer__first-row
-                ul.footer__menu.menu
-                    each item in ['About', 'Expirience', 'Education', 'Login']
-                        li.footer__menu-item.menu__item
-                            a(href="#" class=`footer__menu-link footer__menu-link_${item} menu__link`)
-                                .footer__menu-text.menu__text= item
-                ul.footer__socials.socials            
-                    each item in ['fb', 'gh', 'in']
-                        li.socials__item
-                            a(href="#" class=`socials__link socials__link_${item}`)
-                                svg(class=`socials__icon socials__icon_${item}`)
-                                    use(xlink:href=`assets/img/sprite.svg#${item}`)    
-            //- hr
-            .footer__second-row
-                .footer__text Skills management system, created on EPAM Front-End courses
-                .footer__copyright © Lena Aviles | Made with Love | 2017
-            
+        footer.footer
+            .container
+                .footer__first-row
+                    ul.footer__menu.menu
+                        each item in ['About', 'Expirience', 'Education', 'Login']
+                            li.footer__menu-item.menu__item
+                                a(href="#" class=`footer__menu-link footer__menu-link_${item} menu__link`)
+                                    .footer__menu-text.menu__text= item
+                    ul.footer__socials.socials            
+                        each item in ['fb', 'gh', 'in']
+                            li.socials__item
+                                a(href="#" class=`socials__link socials__link_${item}`)
+                                    svg(class=`socials__icon socials__icon_${item}`)
+                                        use(xlink:href=`assets/img/sprite.svg#${item}`)    
+                //- hr
+                .footer__second-row
+                    .footer__text Skills management system, created on EPAM Front-End courses
+                    .footer__copyright © Lena Aviles | Made with Love | 2017
+
+        script(src="assets/js/app.js")    
