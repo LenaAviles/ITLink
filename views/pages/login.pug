@@ -1,0 +1,55 @@
+include ../mixins/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        //- link(rel="stylesheet", href="assets/css/foundation.css")
+        link(rel="stylesheet", href="assets/css/normalize.css")
+        link(rel="stylesheet", href="assets/css/app.css")
+        title ITlink - Login
+    body
+        .wrapper
+            .login__bg
+                    img(src="assets/img/bg/portfolio.jpg", alt="").login__bg-img
+                        
+            form(id='login-form').login-form
+                .login-form__title.subtitle Log in
+                .login-form__login
+                    label.login-form__label
+                        svg.login-form__icon
+                                use(xlink:href=`assets/img/sprite.svg#login`)
+                    input(id="login__username" type="text" name="username" class="login-form__input login-form__username" placeholder="Username" required)
+                .login-form__password
+                    label.login-form__label
+                        svg.login-form__icon
+                                use(xlink:href=`assets/img/sprite.svg#password`)
+                    input(id="login__password" type="text" name="password" class="login-form__input login-form__password" placeholder="Password" required)
+                
+                .login-form__captcha
+                    .login-form__checkbox
+                        label.checkbox I am a human
+                            input.checkbox__input(type="checkbox" checked="checked")
+                            span.checkbox__checkmark
+                    .login-form__question Are you sure?
+                    .login-form__radio
+                        label.radio Yes
+                            input.radio__input(type="radio" name="radio")
+                            span.radio__checkmark
+                        label.radio I'm not sure
+                            input.radio__input(type="radio" name="radio")
+                            span.radio__checkmark
+
+                
+                button.button(id='main-button').login-form__button_left Main
+                
+                input.button(type="submit" id='login-button' value='Log in').login-form__button_right 
+            
+        footer.login-footer                
+                .login-footer__text Skills management system, created on EPAM Front-End courses | © Lena Aviles | Made with Love | 2017
+                //- .login-footer__copyright © Lena Aviles | Made with Love | 2017
+
+        script(src="assets/js/foundation.js")
+        script(src="assets/js/app.js")

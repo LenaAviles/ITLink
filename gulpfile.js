@@ -1,6 +1,7 @@
 'use strict';
 
 global.$ = {
+  dev: true,
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
@@ -17,7 +18,10 @@ global.$ = {
   spritesmith: require('gulp.spritesmith'),
   buffer: require('vinyl-buffer'),
   merge: require('merge-stream'),
+  babel : require('babelify'),
   cssunit: require('gulp-css-unit'),
+  browserify : require('browserify'),
+  source : require('vinyl-source-stream'),
   // phantomjssmith: require('phantomjssmith'),
   gp: require('gulp-load-plugins')()
 };
@@ -30,14 +34,18 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    'pug',
+    // 'pug',
     'js:foundation',
     'js:process',
     'copy:image',
     'copy:fonts',
     'css:foundation',
     'sprite:svg',
-    'sprite:png'
+    'sprite:png',
+    'create:version'
+  ),
+  $.gulp.parallel(
+    'nodemon'
   ),
   $.gulp.parallel(
     'watch',

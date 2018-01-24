@@ -1,0 +1,81 @@
+extends ../main-layout.pug
+
+block vars
+     - var title = 'About'
+
+block content
+    .container
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/bg/portfolio.jpg", alt="").hero__bg-img        
+            
+                ul.socials.hero__socials            
+                    each item in ['fb', 'gh', 'in']
+                        li.socials__item
+                            a(href="#" class=`socials__link socials__link_${item}`)
+                                svg(class=`socials__icon socials__icon_${item}`)
+                                    use(xlink:href=`assets/img/sprite.svg#${item}`)                    
+                a(href="#").hamburger
+            a(href="#").down-arrow
+                img(src="assets/img/icons/arrow_down.svg", alt="").down-arrow__icon
+
+            .hero__title            
+                img(src="assets/img/decor/portfolio-header.png", alt="").section-title
+                .user.hero__user-block
+                    .user__photo.hero-user__photo
+                        .user__photo-avatar
+                            img(src="assets/img/content/user.jpg", alt="").user__photo-img.hero-user__photo-img
+                    .user__name Lena Ricabal Aviles
+                    .user__desc QA Engineer - Delphi Software <br>Ukraine
+
+        section.section.triangles
+            .triangles__left
+                svg(
+                    viewbox="0 0 1000 100" 
+                    preserveAspectRatio="none"
+                    class="triangle triangle_fill_white about__triangles")
+                    polygon(points="0,0 0,100 1000,100")
+            .triangles__right
+                svg(
+                    viewbox="0 0 1000 100" 
+                    preserveAspectRatio="none"
+                    class="triangle triangle_fill_beige about__triangles")
+                    polygon(points="0,100 1000,100 1000,0")
+
+
+        section.section.about
+            .about__left     
+                +title('ABOUT ME', 'about-header.png', 'about__section-title')
+                .user-about
+                    .user-about__picture
+                        img(src="assets/img/content/user.jpg", alt="").user-about__photo-img
+                    .user-about__title.subtitle.subtitle_about
+                        | Who am I
+                    .user-about__text
+                        p.user-about__text_paragraph Hello! I'm an enthusiastic front-end developer with excellent knowledge of HTML and CSS - cross-browser and responsive markup with semantic, clear and easily readable code.
+                        p.user-about__text_paragraph I carefully follow the latest trends and innovations in the field of information technology. I use the most effective methods for solving problems.
+                        p.user-about__text_paragraph I am proficient in text editor Atom, Brackets, PhpStorm, graphics editor Adobe Photoshop. 
+                        
+            .about__right
+                .about-data__description
+                    .about-data__title
+                        .subtitle.subtitle_about What can I do
+                    .about-data__text
+                        p.about-data__text_paragraph I'm a quick-learner and really hungry for knowledge, I am purposeful and persistent. I also have excellent communication skills, I'm friendly and ready to work in a team for best result. Difficult tasks never frighten me.
+                        p.about-data__text_paragraph I just love to code - and I do it with a passion for clean, well commented and standard compliant code.
+                .about-data__content
+                ul.skills
+                    each skillGroup in skills
+                        each skillsArray, skillGroupName in skillGroup
+                            li.skills__item
+                                .skill-section
+                                    .skill-section__title= skillGroupName
+                                    ul.skill-section__list.skill-section__list_about  
+                                        each skill in skillsArray
+                                            each skillRate, skillTitle in skill
+                                                li.skills-section__item
+                                                    .skill
+                                                        +skill__circle(skillRate)                                                    
+                                                        .skill__name= skillTitle                
+        section.section.map
+        .empty

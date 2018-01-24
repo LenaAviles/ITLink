@@ -1,7 +1,11 @@
 extends ../main-layout.pug
+
+block vars
+     - var title = 'Main'
+     
 block content
     .container
-        aside.sidebar
+        aside(id='main-sidebar').sidebar
             
             .sidebar__hero-bg
                 .sidebar__hero-title                
@@ -37,7 +41,7 @@ block content
                             span.courses-totals__courses-average 5
                             span.courses-totals__text courses in progress                           
 
-        main.main-content
+        main(id='main-content').main-content
             .dialog.topnews__item
                 .topnews__header.dialog__header
                     .topnews__user
