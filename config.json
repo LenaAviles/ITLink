@@ -1,5 +1,13 @@
 {
-  "upload": "public/upload",
+  "db": {
+    "host": "127.0.0.1",
+    "port": "27017",
+    "name": "test",
+    "user": "",
+    "password": ""
+  },
+  "upload": "source/images/upload",
+  "_comment": "public/upload",
   "mail": {
     "subject": "Сообщение с сайта-портфолио",
     "smtp": {

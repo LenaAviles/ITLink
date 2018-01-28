@@ -1,0 +1,42 @@
+.form-container {
+    padding: 10px;
+    width: 320px;
+    text-align: center;
+}
+
+.form__input-line {
+    position: relative;
+    width: 300px;
+}
+
+.form__input-file-img {
+    width: 300px;
+    height: 300px;
+    background: url("http://placehold.it/300");
+    background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center top; 
+}
+
+.form__input-file-trigger {
+    display: block;         
+  }
+
+.form__input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 300px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.form__btn-send {
+    float: left;
+    width: 49%;
+}
+
+.form__btn-reset {
+    float: right;
+    width: 49%;
+}

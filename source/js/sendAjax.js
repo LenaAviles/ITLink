@@ -7,7 +7,7 @@ export default function (url, data, cb) {
     try {
       result = JSON.parse(xhr.responseText);
     } catch (e) {
-      cb('Извините в данных ошибка');
+      cb('Error');
     }
     cb(result.status);
   };

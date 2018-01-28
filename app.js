@@ -16,6 +16,27 @@ const config = require('./config');
 // получаем абсолютный путь к папке upload, в которую будут загружаться картинки
 // проектов
 const uploadDir = path.join(__dirname, config.upload);
+
+//подключаем модули
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+//mongoose.connect('mongodb://root:12345@ds137191.mlab.com:37191/testing');
+mongoose
+  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {        
+    user: config.db.user,
+    pass: config.db.password
+  })  
+  .catch(e => {
+    console.error(e);
+    throw e;
+  });
+  
+require('./models/db-close');
+//подключаем модели(сущности, описывающие коллекции базы данных)
+require('./models/news');
+require('./models/courses');
+require('./models/pic');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -26,6 +47,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, currentStatic)));
 
+app.use(favicon(path.join(__dirname, 'public/assets/img', 'favicon.ico')))
 
 app.use('/', require('./routes/index'));
 app.use('/contact', require('./routes/mail'));

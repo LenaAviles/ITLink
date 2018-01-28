@@ -26,8 +26,24 @@ block content
 					a(href="").courses-category__link Workflow
 						span.courses-category__total (10 courses)
 
-		main.main-content
-			section.pagination.topnews__item
+		main.main-content.topnews__item
+			.col
+				.form-container
+					form.form#add-course(action='/upload' method="POST" enctype="multipart/form-data")
+						.form__subtitle.subtitle Add new course
+						.status
+						.form__input-line
+							textarea(placeholder="Describe the course").dialog__text.topnews__content.form__input#course-desc
+						.form__input-line
+							.form__input-file-img#img-holder
+							label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
+							input(name="photo" type="file" required accept="image/*").form__input.form__input-file#file-select
+							<p class="file-return"></p>
+						.form__btns.form__input-line
+							input(name="" type="submit" value="Add course").button.save-button.form__btn-send
+							input(name="" type="reset" value="Cancel").button.save-button.form__btn-reset
+
+			section.pagination
 				a(href="#").pagination__control.pagination__control_left &#8249
 				ul.pagination__list
 					li.pagination__item
@@ -42,3 +58,6 @@ block content
 						a(href="#").pagination__link 5
 				a(href="#").pagination__control.pagination__control_right &#8250
 	.empty
+
+	block scripts
+		script(src=`assets/js/courses${suffix}.js${version}`)

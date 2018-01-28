@@ -42,7 +42,7 @@ block content
                             span.courses-totals__text courses in progress                           
 
         main(id='main-content').main-content
-            .dialog.topnews__item
+            form.dialog.topnews__item#add-news( method="POST")
                 .topnews__header.dialog__header
                     .topnews__user
                         .user
@@ -51,9 +51,38 @@ block content
                                     img(src="assets/img/content/user.jpg", alt="").user__photo-img.topnews-user__photo-img
                             .topnews-user__name Lena Ricabal Aviles
                             .topnews-user__desc QA Engineer - Delphi Software
-                    .topnews__date 17.01.2018
-                textarea(placeholder="Say something...").dialog__text.topnews__content
-                    
+                    .topnews__date#current-date 
+                .status
+                textarea(name="text" placeholder="Say something...").dialog__text.topnews__content
+                input(name="" type="submit" value="Save").button.save-button#save-button
+
+
+            ul.topnews
+                each index in items
+                    //- - console.log(index)                
+                    li.topnews__item
+                        .topnews__header
+                            .topnews__user
+                                .user
+                                    .user__photo.topnews-user__photo
+                                        .user__photo-avatar.topnews-user__photo-avatar
+                                            img(src="assets/img/content/user.jpg", alt="").user__photo-img.topnews-user__photo-img
+                                    .topnews-user__name= index.author
+                                    .topnews-user__desc QA Engineer - Delphi Software
+                                
+                            .topnews__date= index.date
+
+                        .topnews__content
+                            p= index.body
+
+                        ul.topnews__events.post-events            
+                            each item in ['like', 'share', 'comment']
+                                li.post-events__item
+                                    a(href="#" class=`post-events__link post-events__link_${item}`)
+                                        svg(class=`post-events__icon post-events__icon_${item}`)
+                                            use(xlink:href=`assets/img/sprite.svg#${item}`)
+
+                                       
 
             ul.topnews
                 li.topnews__item
@@ -83,3 +112,6 @@ block content
 
 
     .empty
+     
+    block scripts
+        script(src=`assets/js/index${suffix}.js${version}`) 
