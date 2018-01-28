@@ -11,11 +11,12 @@ document.getElementById("current-date").innerHTML = Date(); //.toString().split(
 
 var formAddNews = document.querySelector('#add-news');
 
+// this hack to prevent double data in db
+$("#save-button").unbind("click");
 formAddNews.addEventListener('submit', prepareSendPost);
 
 function prepareSendPost(e) {
   e.preventDefault();
-  console.log(e);
 
   var data = {
     author: 'Lena Ricabal Aviles',

@@ -7,7 +7,7 @@
     "password": ""
   },
   "upload": "source/images/upload",
-  "_comment": "public/upload",
+  "public_upload": "public/assets/img/upload",
   "mail": {
     "subject": "Сообщение с сайта-портфолио",
     "smtp": {

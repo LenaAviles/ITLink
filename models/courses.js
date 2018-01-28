@@ -7,8 +7,17 @@ const mongoose = require('mongoose'),
       type: String,
       required: [true, 'Please, describe the course']
     },
+    dateStart: {
+      type: Date,
+      required: [true, 'Please, provide the start date']
+    },
+    dateEnd: {
+      type: Date,
+      required: [true, 'Please, provide the end date']
+    },
     picture: {
-      type: String
+      type: String,
+      required: [true, 'Please, provide the picture']
     }
   });
 

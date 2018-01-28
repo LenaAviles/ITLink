@@ -5,12 +5,13 @@ document.getElementById("current-date").innerHTML = Date();//.toString().split('
 
 const formAddNews = document.querySelector('#add-news');
 
+// this hack to prevent double data in db
+$( "#save-button" ).unbind( "click" );
 formAddNews.addEventListener('submit', prepareSendPost);
 
 function prepareSendPost(e) {    
     e.preventDefault(); 
-    console.log(e);  
-    
+        
     let data = {
       author: 'Lena Ricabal Aviles',
       date: new Date(),

@@ -34,13 +34,14 @@ router.post('/upload', function (req, res) {
         fs.rename(files.photo.path, files.photo.name);
       }
       let dir = config
-        .upload
-        .substr(config.upload.indexOf('/'));
-      const item = new Model({name: fields.name, picture: path.join(dir,files.photo.name)});
+        .public_upload
+        .substr(config.public_upload.indexOf('/'));
+      let imgPath = path.join(dir,files.photo.name).replace(/\\/g, "/");
+      const item = new Model({name: fields.name, picture: imgPath});
       item
         .save()
         .then(
-            i => res.json({status: 'The picture has beeen uploaded succesfully'}),
+            i => res.json({ "status": {status: 'The picture has beeen uploaded succesfully', "url": imgPath} }),
             e => res.json({status: e.message})
         );
       // const item = new Model({name: fields.name});
@@ -55,4 +56,33 @@ router.post('/upload', function (req, res) {
     });
   });
 });
+
+router.post('/addcourse', (req, res) => {  
+  
+  const Model = mongoose.model('courses');
+      
+  let item = new Model({
+    name: req.body.name, 
+    dateStart: new Date(req.body.dateStart), 
+    dateEnd: new Date(req.body.dateEnd), 
+    picture: req.body.picture});
+    
+  item.save().then(
+    //обрабатываем и отправляем ответ в браузер
+    (i) => {
+      return res.json({status: 'Success'});
+    }, e => {
+      //если есть ошибки, то получаем их список и так же передаем в шаблон
+    const error = Object
+        .keys(e.errors)
+        .map(key => e.errors[key].message)
+        .join(', ');
+
+      //обрабатываем шаблон и отправляем его в браузер
+    res.json({
+      status: 'Error: ' + error
+    });
+  });
+});
+
 module.exports = router;
