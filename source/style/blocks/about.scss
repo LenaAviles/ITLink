@@ -25,3 +25,9 @@
     position: absolute;
     bottom: 100%;
 }
+
+.about__subtitle {
+    padding: 45px 80px; 
+    @include centered(x);
+	position: relative;
+}

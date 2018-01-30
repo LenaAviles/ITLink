@@ -3,13 +3,11 @@
     font-size: 35px;
     @include bernier();    
 	
-	
-	&_about {
-		@include centered(x);
-		padding: 45px 80px;  
+	&_dashed {
+				
 		display: inline-block;
 		position: relative;
-	
+
 		&:after, &:before {
 			content: "";
 			display: block;

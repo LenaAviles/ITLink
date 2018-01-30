@@ -11,7 +11,15 @@ router.get('/', function (req, res) {
     title: 'Courses'
   };
   Object.assign(obj, req.app.locals.settings);
-  res.render('pages/courses', obj);
+  const Model = mongoose.model('pic');
+  Model
+    .find()
+    .then(items => {
+      // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
+      // записей в блоге
+      Object.assign(obj, {items: items});
+      res.render('pages/courses', obj);
+    });
 });
 
 router.post('/upload', function (req, res) {

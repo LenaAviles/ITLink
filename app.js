@@ -8,6 +8,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const jsonfile = require('jsonfile');
 const fileVersionControl = 'version.json';
@@ -36,6 +38,7 @@ require('./models/db-close');
 require('./models/news');
 require('./models/courses');
 require('./models/pic');
+require('./models/user');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,6 +48,20 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+
+app.use(session({
+  secret: 'secret',
+  key: 'keys',
+  cookie: {
+    path: '/',
+    httpOnly: true,
+    maxAge: null
+  },
+  saveUninitialized: false,
+  resave: false,
+  store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
+
 app.use(express.static(path.join(__dirname, currentStatic)));
 
 app.use(favicon(path.join(__dirname, 'public/assets/img', 'favicon.ico')))

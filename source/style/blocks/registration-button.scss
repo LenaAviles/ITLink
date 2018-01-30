@@ -1,0 +1,15 @@
+.registration-button {
+	width: 180px;
+	position: absolute;
+	top: 40px;
+	right: 50px;
+	background-color: transparent;
+	border: 1px solid $trans-white;
+	border-radius: 5px;
+	color: $trans-white;
+
+	&:hover {
+		border-color: #fff;
+		color: #fff;
+	}
+}

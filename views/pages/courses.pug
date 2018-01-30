@@ -27,37 +27,41 @@ block content
 						span.courses-category__total (10 courses)
 
 		main.main-content.topnews__item
-			.col
-				.form-container
-					form.form#add-course(action='/upload' method="POST" enctype="multipart/form-data")
-						.form__subtitle.subtitle Add new course
-						.status
-						.form__input-line
-							textarea(name="text" placeholder="Describe the course").dialog__text.topnews__content.form__input#course-desc
-						.form__input-line
-							.form__input-file-img#img-holder
-							label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
-							input(name="photo" type="file" required accept="image/*").form__input.form__input-file#file-select
-						
-						.form__input-line
-							label(for="date-start") Course starts:
-							br
-							label.login-form__label
-								svg.login-form__icon
-										use(xlink:href=`assets/img/sprite.svg#calendar`)
-							input(id="date-start" type="date" name="start" class="login-form__input login-form__username" placeholder="" required)
 
-						.form__input-line
-							label(for="date-end") Course ends:
-							br
-							label.login-form__label
-								svg.login-form__icon
-										use(xlink:href=`assets/img/sprite.svg#calendar`)
-							input(id="date-end" type="date" name="end" class="login-form__input login-form__username" placeholder="" required)
-						
-						.form__btns.form__input-line
-							input(name="" type="submit" value="Add course").button.save-button.form__btn-send#add-btn
-							input(name="" type="reset" value="Cancel").button.save-button.form__btn-reset
+			ul
+				each index in items
+					figure
+					p
+						img(src=`${index.picture}`).form__input-file-img
+					figcaption= index.name
+				
+			form.form.add-course-form#add-course(action='/upload' method="POST" enctype="multipart/form-data")
+				.form__title.subtitle.subtitle_dashed Add course
+				.status
+				.form__input-line
+					textarea(name="text" placeholder="Describe the course").dialog__text.topnews__content.form__input#course-desc
+				.form__input-line
+					.form__input-file-img#img-holder
+					label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
+					input(name="photo" type="file" required accept="image/*").form__input.form__input-file#file-select
+				
+				.form__input-line
+					label(for="date-start").form__label Course starts:							
+					label.input__label
+						svg.form__icon
+								use(xlink:href=`assets/img/sprite.svg#calendar`)
+					input(id="date-start" type="date" name="start" class="form__input login-form__username" placeholder="" required)
+
+				.form__input-line
+					label(for="date-end").form__label Course ends:							
+					label.input__label
+						svg.form__icon
+								use(xlink:href=`assets/img/sprite.svg#calendar`)
+					input(id="date-end" type="date" name="end" class="form__input login-form__username" placeholder="" required)
+				
+				.add-course-form__buttons.form__btn-group
+					input(name="" type="submit" value="Add course").button.form__button_left#add-btn
+					input(name="" type="reset" value="Cancel").button.form__button_right
 
 			section.pagination
 				a(href="#").pagination__control.pagination__control_left &#8249

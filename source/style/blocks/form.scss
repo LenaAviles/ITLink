@@ -1,27 +1,75 @@
-.form-container {
-    padding: 10px;
+.form {   
     width: 380px;
-    height: 780px;
-    text-align: center;    
+    background: rgba(#fff, .85);
+    border-radius: 5px;
+    @include centered();
+    padding: 0 20px;
+    color: #727c84;    
+    text-align: center; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: fixed;       
 }
 
-.form__input {    
-    outline: 0;
-    border: none;    
-    border-radius: 5px;
-    padding: 15px;
+.form__title {
+    padding: 20px 80px;
 }
+
+.form__label {
+    display: block;
+    text-align: left;
+}
+
+.status {
+    position: fixed;
+    width: 380px;
+    top: 60px;
+    left: 50%;
+    margin-left: -190px;
+}
+
+.form__icon {    
+    display: inline-block;
+    fill: #c4c9cb;    
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.input__label, .form__input {    
+    outline: 0;
+    border: none;        
+    border-radius: 5px;
+    padding: 15px;   
+}
+
+.input__label {
+    font-size: 15px;
+    width: 15%;
+    background-color: #efeee9;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;    
+}
+
+.form__input { 
+    color: #727c84;    
+    width: 85%;
+    margin: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
 
 .form__input-line {
     position: relative;
-    width: 100%;
+    margin-bottom: 20px;    
 }
 
 .form__input-file-img {
     @include centered(x);
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background: url("http://placehold.it/300");
     background-repeat:no-repeat;
 	background-size:cover;
@@ -41,12 +89,29 @@
     cursor: pointer;
 }
 
-.form__btn-send {
-    float: left;
-    width: 49%;
+.form__btn-group {
+    width: 380px;
+	left: 0;	
+	position: absolute;
 }
 
-.form__btn-reset {
+.form__button_left, .form__button_right {
+    height: 50px;
+    font-weight: bold;    
+    width: 49.87%;     
+    background: rgba($skills-green, .5);
+    
+    &:hover {
+        background: rgba($skills-green, .7);
+    }
+  }
+
+.form__button_left {
+    float: left;
+    border-bottom-left-radius: 5px;    
+}
+
+.form__button_right {
     float: right;
-    width: 49%;
+    border-bottom-right-radius: 5px;    
 }

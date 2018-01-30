@@ -1,10 +1,21 @@
-// import { Mongoose } from 'mongoose';
+
 const mongoose = require('mongoose');
 
 const express = require('express');
 const router = express.Router();
 
-router.get('/', function (req, res) {
+const isAdmin = (req, res, next) => {
+  // если в сессии текущего пользователя есть пометка о том, что он является
+  // администратором
+  if (req.session.isAdmin) {
+    //то всё хорошо :)
+    return next();
+  }
+  //если нет, то перебросить пользователя на главную страницу сайта
+  res.redirect('/');
+};
+
+router.get('/', isAdmin, function (req, res) {
   let obj = {
     title: 'ITlink'
   };
@@ -20,11 +31,11 @@ router.get('/', function (req, res) {
     });
 });
 
-router.get('/main', function (req, res) {
+router.get('/main', isAdmin, function (req, res) {
   res.redirect('/');
 });
 
-router.post('/addpost', (req, res) => {
+router.post('/addpost', isAdmin, (req, res) => {
   // if (!req.body.text) return;
   
   const Model = mongoose.model('news');

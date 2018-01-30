@@ -1,57 +1,7 @@
-.login-form {
-    width: 380px;
+.login-form {    
     height: 350px;
-    background: rgba(#fff, .75);
-    border-radius: 5px;
-    @include centered();
-    padding: 0 20px;
-    color: #727c84;
-    text-align: center;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    position: fixed;
-    z-index: 999;
+    position: absolute;      
 }
-
-.login-form__title {
-    padding: 20px 0;
-}
-
-.login-form__login, .login-form__password {    
-    margin-bottom: 20px;
-}
-
-.login-form__icon {    
-    display: inline-block;
-    fill: #c4c9cb;    
-    height: 16px;
-    vertical-align: middle;
-    width: 16px;
-  }
-
-.login-form__label, .login-form__input {    
-    outline: 0;
-    border: none;    
-    border-radius: 5px;
-    padding: 15px;
-}
-
-
-.login-form__label {
-    font-size: 15px;
-    width: 15%;
-    background-color: #efeee9;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;    
-}
-
-.login-form__input {    
-    width: 85%;
-    margin: 0;
-    background-color: #fff;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-  }
 
 .login-form__captcha {
       margin: 25px 0;
@@ -66,29 +16,6 @@
     padding-top: 35px;
 }
   
-
-.login-form__button_left, .login-form__button_right {
-    height: 50px;
-    font-weight: bold;
-    display: block;
-    float: left;
-    width: 49.9%; 
-    position: absolute; 
-    top: 350px;     
-    bottom: 0; 
-    background: rgba($skills-green, .5);
-    
-    &:hover {
-        background: rgba($skills-green, .4);
-    }
-  }
-
-.login-form__button_left {
-    left: 0;
-    border-bottom-left-radius: 5px;    
-}
-
-.login-form__button_right {
-    right: 0;
-    border-bottom-right-radius: 5px;    
+.login-form__buttons {
+    top: 350px;
 }
