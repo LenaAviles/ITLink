@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
     title: 'Courses'
   };
   Object.assign(obj, req.app.locals.settings);
-  const Model = mongoose.model('pic');
+  const Model = mongoose.model('courses');
   Model
     .find()
     .then(items => {
@@ -71,6 +71,7 @@ router.post('/addcourse', (req, res) => {
       
   let item = new Model({
     name: req.body.name, 
+    desc: req.body.desc,
     dateStart: new Date(req.body.dateStart), 
     dateEnd: new Date(req.body.dateEnd), 
     picture: req.body.picture});

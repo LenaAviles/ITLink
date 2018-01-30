@@ -1,8 +1,9 @@
 .form {   
     width: 380px;
-    background: rgba(#fff, .85);
+    background: $form-color;
     border-radius: 5px;
     @include centered();
+    top: 45%;
     padding: 0 20px;
     color: #727c84;    
     text-align: center; 
@@ -16,8 +17,7 @@
 }
 
 .form__label {
-    display: block;
-    text-align: left;
+    display: block;    
 }
 
 .status {
@@ -40,7 +40,7 @@
     outline: 0;
     border: none;        
     border-radius: 5px;
-    padding: 15px;   
+    padding: 13px;   
 }
 
 .input__label {
@@ -58,35 +58,61 @@
     background-color: #fff;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {    
+        -webkit-appearance: none;
+        margin: 0; 
+    }
+
+    // &::-webkit-calendar-picker-indicator {
+    //     color: transparent;
+    //     opacity: 1;
+    //     background: url("/assets/img/icons/calendar.svg") no-repeat center;
+    //     background-size: contain;
+    //   }
   }
 
-.form__input-line {
+.form__input-line {    
     position: relative;
     margin-bottom: 20px;    
 }
 
 .form__input-file-img {
     @include centered(x);
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background: url("http://placehold.it/300");
+    position: relative;    
+    width: 180px;
+    height: 180px;
+    background: $skills-grey;
     background-repeat:no-repeat;
 	background-size:cover;
-	background-position:center top; 
+    background-position:center top; 
+    
+    &:after {
+        content: attr(data-content);
+        position: absolute;
+        @include centered;
+        z-index: -1;
+      }
 }
 
 .form__input-file-trigger {
-    display: block;         
+    display: block;          
   }
 
 .form__input-file {
     position: absolute;
     top: 0; left: 0;
-    width: 300px;
+    width: 180px;
+    height: 180px;
     opacity: 0;
     padding: 14px 0;
     cursor: pointer;
+}
+
+.form__input-group {
+    float: left;
+    width: 50%;
 }
 
 .form__btn-group {

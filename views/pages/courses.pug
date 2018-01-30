@@ -39,29 +39,32 @@ block content
 				.form__title.subtitle.subtitle_dashed Add course
 				.status
 				.form__input-line
-					textarea(name="text" placeholder="Describe the course").dialog__text.topnews__content.form__input#course-desc
+					label(for="name") Name:
+					input(id="name" type="text" name="name" class="form__input" placeholder="" required)
+				.form__input-line
+					textarea(name="desc" placeholder="Describe the course").dialog__text.topnews__content.form__input#desc
 				.form__input-line
 					.form__input-file-img#img-holder
-					label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
+					//- label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
 					input(name="photo" type="file" required accept="image/*").form__input.form__input-file#file-select
 				
-				.form__input-line
+				.form__input-line.form__input-group
 					label(for="date-start").form__label Course starts:							
-					label.input__label
-						svg.form__icon
-								use(xlink:href=`assets/img/sprite.svg#calendar`)
+					//- label.input__label
+					svg.form__icon
+							use(xlink:href=`assets/img/sprite.svg#calendar`)
 					input(id="date-start" type="date" name="start" class="form__input login-form__username" placeholder="" required)
 
-				.form__input-line
+				.form__input-line.form__input-group
 					label(for="date-end").form__label Course ends:							
-					label.input__label
-						svg.form__icon
-								use(xlink:href=`assets/img/sprite.svg#calendar`)
+					//- label.input__label
+					svg.form__icon
+							use(xlink:href=`assets/img/sprite.svg#calendar`)
 					input(id="date-end" type="date" name="end" class="form__input login-form__username" placeholder="" required)
 				
 				.add-course-form__buttons.form__btn-group
 					input(name="" type="submit" value="Add course").button.form__button_left#add-btn
-					input(name="" type="reset" value="Cancel").button.form__button_right
+					input(name="" type="reset" value="Cancel").button.form__button_right#cancel-btn
 
 			section.pagination
 				a(href="#").pagination__control.pagination__control_left &#8249

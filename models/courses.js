@@ -7,6 +7,10 @@ const mongoose = require('mongoose'),
       type: String,
       required: [true, 'Please, describe the course']
     },
+    desc: {
+      type: String,
+      required: [true, 'Please, describe the course']
+    },
     dateStart: {
       type: Date,
       required: [true, 'Please, provide the start date']
