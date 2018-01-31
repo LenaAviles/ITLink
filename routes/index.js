@@ -15,7 +15,7 @@ const isAdmin = (req, res, next) => {
   res.redirect('/');
 };
 
-router.get('/', isAdmin, function (req, res) {
+router.get('/', function (req, res) {
   let obj = {
     title: 'ITlink'
   };

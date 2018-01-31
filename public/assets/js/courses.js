@@ -13,6 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var formAddCourse = document.querySelector('#add-course');
 var fileSelect = document.querySelector('#file-select');
+var addNew = document.querySelector('#add-new');
 
 // this hack to prevent double data in db
 $("#add-btn").unbind("click");
@@ -23,6 +24,9 @@ fileSelect.addEventListener('change', function (e) {
 formAddCourse.addEventListener('submit', prepareSendCourse);
 formAddCourse.addEventListener('reset', function (e) {
   formAddCourse.style.display = "none";
+});
+addNew.addEventListener('click', function (e) {
+  e.preventDefault();formAddCourse.style.display = "block";
 });
 
 function handleFileSelect(evt) {
@@ -73,6 +77,7 @@ function prepareSendCourse(e) {
   };
 
   (0, _prepareSend2.default)('/courses/addcourse', formAddCourse, data);
+  location.reload();
 }
 
 },{"./prepareSend":2,"./upload":4}],2:[function(require,module,exports){

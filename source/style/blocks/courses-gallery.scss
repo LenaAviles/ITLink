@@ -1,0 +1,55 @@
+.courses-gallery {   
+    text-align: center;
+}
+
+.courses-gallery__item {
+    width: 300px;     
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 5% 5% 40px 5%;
+}
+
+.courses-gallery__link {          
+    color: $main-font-color;        
+}
+
+.courses-gallery__img {          
+    width: 300px;
+    height: 300px;
+    object-fit: cover;    
+    border: 2px solid $skills-grey;
+    border-radius: 5px;
+}
+
+.courses-gallery__name {
+    font-weight: bold;
+    line-height: 2;    
+}
+
+.courses-gallery__desc, .courses-gallery__dates {    
+    font-size: 12px;
+}
+
+.courses-gallery__desc {
+    text-align: start;
+}
+
+.courses-gallery__img_add-course {
+    background: $skills-grey;    
+}
+
+.courses-gallery__icon {    
+    fill: #c4c9cb;    
+    height: 80px;    
+    width: 80px;
+    position: relative;
+    top: 50%;
+    margin-top: -40px;
+    text-align: center; 
+    
+    &:hover {
+        fill: #fff;
+    }
+}
+

@@ -3,6 +3,7 @@ import prepareSend from './prepareSend';
 
 const formAddCourse = document.querySelector('#add-course');
 const fileSelect = document.querySelector('#file-select');
+const addNew = document.querySelector('#add-new');
 
 // this hack to prevent double data in db
 $( "#add-btn" ).unbind( "click" );
@@ -10,6 +11,7 @@ $("#img-holder").attr('data-content','Upload picture');
 fileSelect.addEventListener('change', function (e) { handleFileSelect(e);  prepareSendFile(e); });
 formAddCourse.addEventListener('submit', prepareSendCourse);
 formAddCourse.addEventListener('reset', (e) => { formAddCourse.style.display = "none"; });
+addNew.addEventListener('click', (e) => { e.preventDefault(); formAddCourse.style.display = "block"; });
 
 function handleFileSelect(evt) {
   var f = evt.target.files[0];
@@ -63,4 +65,5 @@ function prepareSendCourse(e) {
   };
   
   prepareSend('/courses/addcourse', formAddCourse, data);
+  location.reload();
 }

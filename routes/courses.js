@@ -91,7 +91,7 @@ router.post('/addcourse', (req, res) => {
     res.json({
       status: 'Error: ' + error
     });
-  });
+  });  
 });
 
 module.exports = router;

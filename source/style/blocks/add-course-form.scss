@@ -1,11 +1,17 @@
 .add-course-form {
+	background-color: $beige !important;	
 	padding: 10px;
-	height: 520px;
+	height: 530px;
 	z-index: 1;
+	display: none;
+
+	input, textarea {
+		border-radius: 5px;
+	}
 }
 
 .add-course-form__buttons {	
-	top: 520px;
+	top: 530px;
 	background: rgba($skills-green, .5);
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;

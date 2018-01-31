@@ -28,38 +28,43 @@ block content
 
 		main.main-content.topnews__item
 
-			ul
-				each index in items
-					figure
-					p
-						img(src=`${index.picture}`).form__input-file-img
-					figcaption= index.name
+			ul.courses-gallery
+				each course in items
+					li.courses-gallery__item
+						a(href="" class=`courses-gallery__link courses-gallery__link_${course.name}`)
+							img(src=`${course.picture}` alt=`${course.name}`).courses-gallery__img
+							.courses-gallery__name= course.name
+							.courses-gallery__desc= course.desc
+							-
+								var start = course.dateStart.toLocaleDateString('en-US');
+								var end = course.dateEnd.toLocaleDateString('en-US');
+
+							.courses-gallery__dates= `${start} - ${end}` 
+
+				li.courses-gallery__item.courses-gallery__item_add-course#add-new
+					a(href="" class=`courses-gallery__link courses-gallery__link_add-course`)
+						.courses-gallery__img.courses-gallery__img_add-course
+							svg.courses-gallery__icon
+								use(xlink:href=`assets/img/sprite.svg#plus`)
+						.courses-gallery__name Add New Course
 				
 			form.form.add-course-form#add-course(action='/upload' method="POST" enctype="multipart/form-data")
 				.form__title.subtitle.subtitle_dashed Add course
 				.status
 				.form__input-line
-					label(for="name") Name:
-					input(id="name" type="text" name="name" class="form__input" placeholder="" required)
+					input(id="name" type="text" name="name" class="form__input" placeholder="Name" required)
 				.form__input-line
-					textarea(name="desc" placeholder="Describe the course").dialog__text.topnews__content.form__input#desc
+					textarea(name="desc" placeholder="Describe the course").form__input#desc
 				.form__input-line
 					.form__input-file-img#img-holder
-					//- label(tabindex="0" for="file-select").button.save-button.form__input-file-trigger Upload picture							
 					input(name="photo" type="file" required accept="image/*").form__input.form__input-file#file-select
 				
 				.form__input-line.form__input-group
-					label(for="date-start").form__label Course starts:							
-					//- label.input__label
-					svg.form__icon
-							use(xlink:href=`assets/img/sprite.svg#calendar`)
+					label(for="date-start").form__label Course starts:
 					input(id="date-start" type="date" name="start" class="form__input login-form__username" placeholder="" required)
 
 				.form__input-line.form__input-group
-					label(for="date-end").form__label Course ends:							
-					//- label.input__label
-					svg.form__icon
-							use(xlink:href=`assets/img/sprite.svg#calendar`)
+					label(for="date-end").form__label Course ends:
 					input(id="date-end" type="date" name="end" class="form__input login-form__username" placeholder="" required)
 				
 				.add-course-form__buttons.form__btn-group
