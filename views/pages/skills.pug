@@ -17,18 +17,17 @@ block content
                 | Skills Rate
             ul.skills
                 each skillGroup in skills
-                    each skillsArray, skillGroupName in skillGroup
+                    each skillsArray in skillGroup
                         li.skills__item.skills-rate__group-item
                             .skill-section.skills-rate__section
-                                .skill-section__title.skills-rate__title= skillGroupName
+                                .skill-section__title.skills-rate__title= skillsArray.name
                                 ul.skill-section__list  
-                                    each skill in skillsArray
-                                        each skillRate, skillTitle in skill
-                                            li.skills-rate__item
-                                                .skill.skills-rate__skill
-                                                    label.skills-rate__name= skillTitle
-                                                    span.skills-rate__input-type %
-                                                    input(value= skillRate type="number" min="0" max="100").skills-rate__input
+                                    each skill in skillsArray.skills                                        
+                                        li.skills-rate__item
+                                            .skill.skills-rate__skill
+                                                label.skills-rate__name= skill.name
+                                                span.skills-rate__input-type %
+                                                input(value= skill.level type="number" min="0" max="100").skills-rate__input
                                                                                                        
         button.button.save-button Save                                              
     .empty

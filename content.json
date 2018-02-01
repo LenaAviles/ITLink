@@ -1,13 +1,31 @@
 {
     "skills" : [
         {
-            "Frontend" : [{"HTML5" : 75}, {"CSS3" : 60}, {"JavaScript & JQuery" : 60}]
+            "id": "frontend",
+            "name": "Frontend",
+            "skills" : [
+                {"name": "HTML5", "level" : 75}, 
+                {"name": "CSS3", "level" : 60}, 
+                {"name": "JavaScript & JQuery", "level" : 60}
+            ]
         },
         {
-            "Backend" : [{"PHP" : 10}, {"mySQL" : 20}, {"Node.js & npm" : 30}, {"Mongo.db" : 40}, {"PHP" : 10}, {"mySQL" : 20}, {"Node.js & npm" : 30}, {"Mongo.db" : 40}]
+            "id": "backend",
+            "name": "Backend",
+            "skills" : [
+                {"name": "PHP", "level" : 10}, 
+                {"name": "mySQL", "level" : 20},
+                {"name": "Node.js & npm", "level" : 30}, 
+                {"name": "Mongo.db", "level" : 40}
+            ]
         },
         {
-            "Workflow" : [{"Git" : 60}, {"Gulp" : 50}, {"Bower" : 40}]
+            "id": "workflow",
+            "name": "Workflow",
+            "skills" : [
+                {"name": "Git", "level" : 60}, 
+                {"name": "Gulp", "level" : 50}, 
+                {"name": "Bower", "level" : 40}]
         }
     ]
 }

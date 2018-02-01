@@ -25,6 +25,7 @@ function prepareSendPost(e) {
   };
 
   (0, _prepareSend2.default)('/addpost', formAddNews, data);
+  location.reload();
 }
 
 },{"./prepareSend":2}],2:[function(require,module,exports){

@@ -52,8 +52,8 @@ block content
                             .topnews-user__name Lena Ricabal Aviles
                             .topnews-user__desc QA Engineer - Delphi Software
                     .topnews__date#current-date 
-                .status
-                textarea(name="text" placeholder="Say something...").dialog__text.topnews__content
+                    .status.status_dialog
+                textarea(name="text" placeholder="Say something...").dialog__text.topnews__content#text
                 input(name="" type="submit" value="Save").button.save-button#save-button
 
 
@@ -73,7 +73,7 @@ block content
                             .topnews__date= index.date
 
                         .topnews__content
-                            p= index.body
+                            p= index.text
 
                         ul.topnews__events.post-events            
                             each item in ['like', 'share', 'comment']

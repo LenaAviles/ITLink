@@ -19,4 +19,5 @@ function prepareSendPost(e) {
     };
     
     prepareSend('/addpost', formAddNews, data);
+    location.reload();
   }

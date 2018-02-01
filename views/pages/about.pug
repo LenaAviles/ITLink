@@ -63,19 +63,18 @@ block content
                     .about-data__text
                         p.about-data__text_paragraph I'm a quick-learner and really hungry for knowledge, I am purposeful and persistent. I also have excellent communication skills, I'm friendly and ready to work in a team for best result. Difficult tasks never frighten me.
                         p.about-data__text_paragraph I just love to code - and I do it with a passion for clean, well commented and standard compliant code.
-                .about-data__content
-                //- ul.skills
-                //-     each skillGroup in skills
-                //-         each skillsArray, skillGroupName in skillGroup
-                //-             li.skills__item
-                //-                 .skill-section
-                //-                     .skill-section__title= skillGroupName
-                //-                     ul.skill-section__list.skill-section__list_about  
-                //-                         each skill in skillsArray
-                //-                             each skillRate, skillTitle in skill
-                //-                                 li.skills-section__item
-                //-                                     .skill
-                //-                                         +skill__circle(skillRate)                                                    
-                //-                                         .skill__name= skillTitle                
+                .about-data__content                
+                ul.skills
+                    each skillGroup in skills
+                        each skillsArray in skillGroup                            
+                            li.skills__item
+                                .skill-section
+                                    .skill-section__title= skillsArray.name
+                                    ul.skill-section__list.skill-section__list_about  
+                                        each skill in skillsArray.skills                                                                                   
+                                            li.skills-section__item
+                                                .skill
+                                                    +skill__circle(skill.level)                                                    
+                                                    .skill__name= skill.name                
         section.section.map
         .empty

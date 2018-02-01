@@ -1,11 +1,12 @@
 .about {
-    @extend %clearfix;
+    @extend %clearfix;    
 }
 
 .about__left, .about__right {
     float: left;
     width: 50%;
     position: relative;
+    height: 100%;
     
     @include tablets() {
         float: none;

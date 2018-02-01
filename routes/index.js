@@ -31,19 +31,15 @@ router.get('/', function (req, res) {
     });
 });
 
-router.get('/main', isAdmin, function (req, res) {
+router.get('/main', function (req, res) {
   res.redirect('/');
 });
 
-router.post('/addpost', isAdmin, (req, res) => {
-  // if (!req.body.text) return;
-  
-  const Model = mongoose.model('news');
-  
-  // var exists = Model.findOne({$and: [{ author: req.body.author}, {body: req.body.text }]});
-  // console.log(exists);
+router.post('/addpost', (req, res) => {
     
-  let item = new Model({author: req.body.author, date: new Date(req.body.date), body: req.body.text});
+  const Model = mongoose.model('news');
+       
+  let item = new Model({author: req.body.author, date: new Date(req.body.date), text: req.body.text});
   item.save().then(
     //обрабатываем и отправляем ответ в браузер
     (i) => {
@@ -59,7 +55,7 @@ router.post('/addpost', isAdmin, (req, res) => {
     res.json({
       status: 'Error: ' + error
     });
-  });
+  });  
 });
 
 module.exports = router;
